@@ -12,9 +12,6 @@ const mainController = {
         const alumnoB = 'Franco Ponce';
         const respuesta = `Trabajo realizado por ${alumnoA} y ${alumnoB}`;
         res.send(respuesta);
-    },
-    paginaNoEncontrada: (req, res) => {
-        res.status(404).send('404 not found. <br> ¡Houston, poseemos problemas!');
     }
 };
 
