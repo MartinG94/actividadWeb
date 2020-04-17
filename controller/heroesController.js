@@ -11,7 +11,7 @@ const heroController = {
             return unHeroe.id == numeroHeroe;
         });
         if(heroeBuscado == undefined){
-            res.send(`Heroe no encontrado`);
+            res.send(`Heroe con el id: ${numeroHeroe} no encontrado`);
             return;
         };
         let respuesta = `​Hola, mi nombre es ${heroeBuscado.nombre} y soy ${heroeBuscado.profesion}.​`
