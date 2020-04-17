@@ -2,11 +2,12 @@ const express = require('express');
 const fs = require('fs');
 const app = express();
 const port = 3030;
-const rutasMain = require('./router/main');
+const rutaMain = require('./router/main');
+const rutaHeroes = require('./router/heroes');
 
 app.listen(port, () => console.log(`Server running in ${port} port`));
-const heroes = JSON.parse(fs.readFileSync(__dirname + '/data/heroes.json', 'utf-8'));
-app.use('/', rutasMain);
+app.use('/', rutaMain);
+app.use('/hero', rutaHeroes);
 
 // // Ruta /heroes ➝ se envía todo el array y Express lo parsea para el browser como JSON :D
 // app.get('/heroes', (¿?) => {
