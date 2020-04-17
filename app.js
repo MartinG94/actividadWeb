@@ -7,7 +7,7 @@ const rutaHeroes = require('./router/heroes');
 
 app.listen(port, () => console.log(`Server running in ${port} port`));
 app.use('/', rutaMain);
-app.use('/hero', rutaHeroes);
+app.use('/heroes', rutaHeroes);
 
 // // Ruta /heroes ➝ se envía todo el array y Express lo parsea para el browser como JSON :D
 // app.get('/heroes', (¿?) => {
