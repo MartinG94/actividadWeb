@@ -6,15 +6,15 @@ const heroController = {
         res.send(listadoHeroes);
     },
     listarHeroePorId: (req, res) => {
-        let numeroHeroe = req.params.idHeroe;
-        let heroeBuscado = listadoHeroes.find( (unHeroe) => {
+        const numeroHeroe = req.params.idHeroe;
+        const heroeBuscado = listadoHeroes.find( (unHeroe) => {
             return unHeroe.id == numeroHeroe;
         });
         if(heroeBuscado == undefined){
             res.send(`Heroe con el id: ${numeroHeroe} no encontrado`);
             return;
         };
-        let respuesta = `​Hola, mi nombre es ${heroeBuscado.nombre} y soy ${heroeBuscado.profesion}.​`
+        const respuesta = `​Hola, mi nombre es ${heroeBuscado.nombre} y soy ${heroeBuscado.profesion}.​`
         res.send(respuesta);
     },
 };
