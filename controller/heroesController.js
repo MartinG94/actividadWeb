@@ -5,7 +5,7 @@ const heroController = {
     listarHeroes: (req, res) => {
         res.send(listadoHeroes);
     },
-    listarHeroePorId: (req, res) => {
+    mostrarNombreYProfesion: (req, res) => {
         const numeroHeroe = req.params.idHeroe;
         const heroeBuscado = listadoHeroes.find( (unHeroe) => {
             return unHeroe.id == numeroHeroe;
