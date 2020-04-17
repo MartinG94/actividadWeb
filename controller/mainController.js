@@ -7,6 +7,12 @@ const mainController = {
         ti!.`
         res.send(textoRespuesta)
     },
+    mostrarCreditos: (req, res) => {
+        const alumnoA = 'Lucas Martín Guillén';
+        const alumnoB = 'Franco Ponce';
+        const respuesta = `Trabajo realizado por ${alumnoA} y ${alumnoB}`;
+        res.send(respuesta);
+    }
 };
 
 module.exports = mainController;
